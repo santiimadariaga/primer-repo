@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/c14bbd8edf.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Venta y Recarga de Matafuegos</title>
 </head>
 
 <body>
@@ -18,27 +18,29 @@
     <!--------- HEADER --------->
 
     <header class="header_container">
-        <div class="logo_container">
-            <img src="./img/Seguridad_del_sol-removebg-preview.png" alt="">
+        <div class="content_header">
+            <div class="logo_container">
+                <img src="./img/Seguridad_del_sol-removebg-preview.png" alt="">
+            </div>
+            <nav class="navbar">
+                <label for="toggle_menu" class="icon_container"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" name="" id="toggle_menu">
+                <ul class="list">
+                    <li>
+                        <a href="#hero" id="" class="hov">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#venta" id="" class="hov">Venta</a>
+                    </li>
+                    <li>
+                        <a href="#recarga" id="" class="hov">Recarga</a>
+                    </li>
+                    <li>
+                        <a href="#empresa" id="" class="hov">Empresa</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navbar">
-            <label for="toggle_menu" class="icon_container"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" name="" id="toggle_menu">
-            <ul class="list">
-                <li>
-                    <a href="#hero" id="" class="hov">Inicio</a>
-                </li>
-                <li>
-                    <a href="#venta" id="" class="hov">Venta</a>
-                </li>
-                <li>
-                    <a href="#recarga" id="" class="hov">Recarga</a>
-                </li>
-                <li>
-                    <a href="" id="" class="hov">Contacto</a>
-                </li>
-            </ul>
-        </nav>
     </header>
 
     <!-------- HERO -------->
@@ -54,56 +56,119 @@
 
     </section>
 
-    <section class="section_container products_container">
-        <!-- <div class="products_container"> -->
-        <div class="products" id="venta">
+    <!-- SECTION VENTAS -->
+
+    <section class="section_container products_container" id="venta">
+        <div class="cards_products">
             <div class="card_front abc bg">
-                <p>EXTINTORES DE A BASE DE POLVO</p>
+                <p>EXTINTORES A BASE DE POLVO</p>
             </div>
+            <div class="card_back">
+                <button class="btn_card">Consulta Stock</button>
+            </div>
+        </div>
+        <div class="cards_products">
             <div class="card_front  water bg">
-                <P>EXTINTORES DE A BASE DE AGUA</P>
+                <P>EXTINTORES A BASE DE AGUA</P>
             </div>
+            <div class="card_back">
+                <button class="btn_card">Consulta Stock</button>
+            </div>
+        </div>
+        <div class="cards_products">
             <div class="card_front co2 bg">
-                <p>EXTINTORES DE A BASE DE CO2</p>
+                <p>EXTINTORES A BASE DE CO2</p>
             </div>
+            <div class="card_back">
+                <button class="btn_card">Consulta Stock</button>
+            </div>
+        </div>
+        <div class="cards_products">
             <div class="card_front potasio bg">
                 <p>EXTINTORES DE ACETATO DE POTASIO K</p>
             </div>
-            <div class="card_front halon bg">
-                <p>EXTINTORES DE A BASE DE HALOCLEAN</p>
+            <div class="card_back">
+                <button class="btn_card">Consulta Stock</button>
             </div>
+        </div>
+        <div class="cards_products">
+            <div class="card_front halon bg">
+                <p>EXTINTORES A BASE DE HALOCLEAN</p>
+            </div>
+            <div class="card_back">
+                <button class="btn_card">Consulta Stock</button>
+            </div>
+        </div>
+        <div class="cards_products">
             <div class="card_front otros bg">
                 <p>CHAPA BALIZA, REPUESTOS Y DEMÁS</p>
             </div>
-        </div>
-        <!-- </div> -->
-    </section>
-
-    <section class="section_container products_container pad">
-        <!-- <div class="products_container"> -->
-        <div class="products" id="recarga">
-            <div class="card_front abc bg">
-                <p>EXTINTORES DE A BASE DE POLVO</p>
-            </div>
-            <div class="card_front  water bg">
-                <P>EXTINTORES DE A BASE DE AGUA</P>
-            </div>
-            <div class="card_front co2 bg">
-                <p>EXTINTORES DE A BASE DE CO2</p>
-            </div>
-            <div class="card_front potasio bg">
-                <p>EXTINTORES DE ACETATO DE POTASIO K</p>
-            </div>
-            <div class="card_front halon bg">
-                <p>EXTINTORES DE A BASE DE HALOCLEAN</p>
-            </div>
-            <div class="card_front otros bg">
-                <p>CHAPA BALIZA, REPUESTOS Y DEMÁS</p>
+            <div class="card_back">
+                <button class="btn_card">Consulta Stock</button>
             </div>
         </div>
-        <!-- </div> -->
     </section>
 
+    <!-- SECTION RECARGAS -->
+
+    <section class="section_container recargas_container">
+        <div class="content_recargas" id="recarga">
+            <div class="texts_recargas">
+                <h2>Recarga de Matafuegos</h2>
+                <p>Realizamos el servicio anual de la recarga de matafuegos</p>
+                <div class="input_flex">
+                    <input type="text" name="" id="" placeholder="Dejanos tu consulta!" class="consult">
+                    <button class="submit">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION EMPRESA -->
+
+    <section class="section_container empresa" id="empresa">
+        <div class="content_empresa">
+            <div class="work">
+                <div class="img_empresa">
+                    <a href="./html/register.html"><img src="./img/android-chrome-192x192.png" alt="Work With Us"></a>
+                </div>
+                <button class="btn_work"><a href="./html/register.html">Trabajá con Nosotros</a></button>
+            </div>
+            <div class="work">
+                <div class="img_empresa">
+                    <a href="./html/login.html"><img src="./img/android-chrome-192x192(1).png" alt="Access"></a>
+                </div>
+                <button class="btn_work"><a href="./html/login.html">Acceso Empleados</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer_container">
+        <div class="content_footer">
+            <div class="text_footer">
+                <h2>Seguridad del Sol</h2>
+            </div>
+            <div class="content_footer_texts">
+                <div class="info_footer">
+                    <p>Información Legal</p>
+                    <p>Política de Privacidad</p>
+                    <p>Diseñador Web: <a href="https://github.com/santo1810">Santiago Madariaga</a></p>
+                </div>
+                <div class="logo_footer">
+                    <img src="./img/Seguridad_del_sol-removebg-preview.png" alt="">
+                </div>
+                <div class="contact_footer">
+                    <p>WPP</p>
+                    <p>GMAIL</p>
+                </div>
+            </div>
+            <div class="text_footer">
+                <p>© 2022 SEGURIDAD DEL SOL</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

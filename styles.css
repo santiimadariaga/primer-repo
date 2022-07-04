@@ -10,7 +10,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 105px;
+  scroll-padding-top: 95px;
 }
 
 body {
@@ -34,15 +34,21 @@ h1 {
   background: rgb(255, 255, 255);
   box-shadow: 0px 15px 20px -15px #000000;
   margin: 0 auto;
-  height: 100px;
-  max-width: 1400px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.content_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  max-width: 1400px;
+  width: 100%;
 }
 
 .logo_container {
@@ -96,7 +102,7 @@ h1 {
     width: 70vw;
     position: fixed;
     right: -100%;
-    top: 100px;
+    top: 90px;
     box-shadow: -10px 20px 10px rgb(0 0 0 / 25%);
     transition: all 0.7s ease-in-out;
     visibility: visible;
@@ -207,6 +213,8 @@ h1 {
   }
 }
 
+/********* SECTION PRODUCTS *********/
+
 .products_container {
   width: 100%;
   /* background-image: url(./img/hero_bg2.jpg);
@@ -215,36 +223,34 @@ h1 {
   background-size: cover; */
   display: flex;
   justify-content: center;
-}
-
-.products {
+  margin: 0 auto;
   max-width: 1400px;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  flex: 1 1 40%;
-  gap: 5px;
 }
 
-.card_front {
+.cards_products {
   height: 300px;
   max-width: 600px;
-  min-width: 250px;
+  min-width: 280px;
   flex: 1 1 30%;
   border: 1px solid rgba(92, 0, 0, 0.589);
   border-radius: 5px;
+  position: relative;
+}
+
+.card_front {
+  height: 100%;
   display: flex;
   flex-direction: column;
-
   text-align: center;
   justify-content: end;
+  align-items: center;
   padding: 0 20px 20px;
   font-weight: 900;
   font-size: 20px;
   color: white;
-  text-shadow: 5px 5px 5px red;
+  text-shadow: 0px 0px 0px 5px red;
 }
-
 .bg {
   background-size: cover;
   background-repeat: no-repeat;
@@ -274,11 +280,238 @@ h1 {
   background-image: url(./img/CHAPABALIZA.jpg);
 }
 
-.card_front:hover {
-  transform: scale(1.1);
-  transition: all 0.5s;
+.card_back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.2);
+  filter: none;
+  opacity: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.pad {
-  padding-top: 50px;
+.cards_products:hover {
+  transition: all 0.7s;
+  transform: scale(0.9);
 }
+
+.cards_products:hover > .card_front {
+  transition: all 0.7s;
+  filter: blur(4px);
+}
+
+.cards_products:hover > .card_back {
+  opacity: 1;
+  transition: all 0.7s;
+}
+
+.btn_card {
+  height: auto;
+  width: auto;
+  background-color: transparent;
+  border: none;
+
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/********* SECTION RECARGAS *********/
+
+.recargas_container {
+  width: 100%;
+  height: 200px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+  padding: 20px 0;
+}
+
+.content_recargas {
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+  /* border: 3px solid black; */
+  display: flex;
+  justify-content: center;
+}
+
+.texts_recargas {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  width: 70%;
+  background: #b8b8b8;
+}
+
+.texts_recargas > h2 {
+  color: #ffffff;
+  text-shadow: 4px 3px 0 #7a7a7a;
+}
+
+.input_flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.input_flex > .consult:focus {
+  outline: none;
+  box-shadow: 10px 10px 14px -5px #000000;
+}
+
+.input_flex > .consult {
+  width: 50%;
+  height: 25px;
+  background-color: coral;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 2px;
+}
+
+.input_flex > .consult::placeholder {
+  color: #fafafa;
+}
+
+.input_flex > .submit {
+  background-color: coral;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 5px;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 29px -3px #000000;
+}
+
+.input_flex > .submit:hover {
+  background-color: white;
+  color: #000000;
+  transition: all 0.5s linear;
+}
+
+@media (max-width: 992px) {
+  .texts_recargas {
+    width: 100%;
+  }
+}
+
+/********* SECTION EMPRESA *********/
+
+.empresa {
+  height: auto;
+  background-color: rgb(255, 79, 66);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 20px 20px;
+}
+
+.content_empresa {
+  width: 80%;
+  max-width: 1400px;
+  border: 2px solid black;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  gap: 20px;
+}
+
+.btn_work {
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.btn_work > a {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 4px 3px 0px #7a7a7a;
+}
+
+.img_empresa:hover {
+  transform: scale(0.8);
+  transition: all 1s linear;
+  animation: palpito 2s ease infinite;
+}
+
+@keyframes palpito {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer_container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.content_footer {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.text_footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.text_footer > h2 {
+  font-size: 30px;
+  background: linear-gradient(360deg, rgb(0, 0, 0), rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content_footer_texts {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+.       BG PARA FOOTER 
+background: linear-gradient(
+  0deg,
+  rgba(255, 103, 91, 1) 0%,
+  rgba(255, 179, 173, 1) 65%,
+  rgba(255, 255, 255, 1) 100%
+  ); */
