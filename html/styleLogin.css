@@ -219,18 +219,116 @@ textarea {
   width: 100%;
   height: auto;
   position: absolute;
-  border: 3px solid black;
 }
 
 .box_login {
   max-width: 1400px;
   width: 70vw;
-  height: 400px;
-  padding-top: 50px;
+  height: 350px;
   display: flex;
   justify-content: center;
-  border: 3px solid black;
+
+  background-color: #b8b8b8;
+  border-radius: 5px;
+  flex-wrap: wrap;
 }
+
+.content_login {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  gap: 10px;
+}
+
+.box_login:hover {
+  transform: scale(1.1);
+  transition: all 0.7s;
+}
+
+.box_one {
+  background-color: coral;
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 25px;
+  gap: 20px;
+
+  box-shadow: 0px 15px 28px -15px #000000;
+}
+
+.box_one p {
+  font-size: 18px;
+}
+
+.box_one input {
+  width: 100%;
+  height: 25px;
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+.box_one input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 10px 10px 14px -5px #000000;
+}
+
+.btn_login {
+  height: 25px;
+  margin-top: 10px;
+
+  background-color: #b8b8b8;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 10px 10px 14px -5px #000000;
+  cursor: pointer;
+}
+
+.btn_login:hover {
+  background-color: #949494;
+  transition: all 0.5s ease;
+}
+
+.box_two {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 90px;
+}
+
+.box_log {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.box_two h1 {
+  color: #ffffff;
+  text-shadow: 4px 3px 0 #7a7a7a;
+}
+
+.box_welcome {
+  text-align: center;
+}
+
+.box_welcome > p a:hover {
+  color: #6b6b6b;
+  transition: all 0.5s ease;
+}
+
+/* @media (max-width: 992px) {
+  .content_login {
+    flex-direction: column;
+  }
+} */
 
 /********** FOOTER **********/
 
