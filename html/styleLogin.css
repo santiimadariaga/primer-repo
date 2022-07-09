@@ -111,38 +111,6 @@ textarea {
   font-weight: 400;
 }
 
-@media (max-width: 992px) {
-  .header_container .list {
-    display: flex;
-    gap: 60px;
-    align-items: center;
-    background-color: #fafafa;
-    padding: 10px 20px;
-    padding-top: 50px;
-    flex-direction: column;
-    height: 100vh;
-    width: 70vw;
-    position: fixed;
-    right: -100%;
-    top: 90px;
-    box-shadow: -10px 20px 10px rgb(0 0 0 / 25%);
-    transition: all 0.7s ease-in-out;
-    visibility: visible;
-  }
-  .icon_container {
-    display: flex;
-  }
-  .icon_container i:hover {
-    color: rgb(92, 0, 0);
-    transition: all 0.5s;
-  }
-
-  .navbar #toggle_menu:checked ~ .list {
-    display: flex;
-    right: 0;
-  }
-}
-
 .hov {
   color: rgb(92, 0, 0);
   position: relative;
@@ -223,6 +191,7 @@ textarea {
 
 .box_login {
   max-width: 1400px;
+  min-width: 280px;
   width: 70vw;
   height: 350px;
   display: flex;
@@ -247,7 +216,7 @@ textarea {
 
 .box_one {
   background-color: coral;
-  width: 45%;
+  width: 55%;
 
   display: flex;
   flex-direction: column;
@@ -315,13 +284,80 @@ textarea {
   text-shadow: 4px 3px 0 #7a7a7a;
 }
 
-.box_welcome {
+.box_welcome_two {
   text-align: center;
 }
 
-.box_welcome > p a:hover {
+.box_welcome_log {
+  display: none;
+}
+
+.box_welcome_two > p a:hover {
   color: #6b6b6b;
   transition: all 0.5s ease;
+}
+
+.box_welcome_log > p a:hover {
+  color: rgb(121, 73, 56);
+  transition: all 0.5s ease;
+}
+
+.content_login > h1 {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .box_two {
+    display: none;
+  }
+
+  .content_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .content_login h1 {
+    display: flex;
+    color: #ffffff;
+    text-shadow: 4px 3px 0 #7a7a7a;
+  }
+
+  .box_login {
+    height: auto;
+  }
+
+  .box_one {
+    width: 80%;
+    height: 350px;
+    gap: 30px;
+  }
+
+  .box_welcome_log {
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .box_log p {
+    font-size: clamp(13px, 2vw, 18px);
+  }
+
+  .box_welcome_log a {
+    font-size: clamp(13px, 2vw, 18px);
+  }
+}
+
+@media (max-width: 576px) {
+  .content_login {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .box_one {
+    width: 95%;
+  }
 }
 
 /* @media (max-width: 992px) {
